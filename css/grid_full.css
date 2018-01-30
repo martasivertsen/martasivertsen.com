@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Grid system to define content with 100% width */ 
+
+.grid_full {
+	width: 100%;
+}
+
+
+/* ----- Column Widths ----- */
+
+
+	/*----- Phone ------ */
+
+	.full_col-1 {
+	  	width: 100%;
+	}
+	
+	.full_col-2 {
+	  	width: 100%;
+	}
+	
+	.full_col-3 {
+	  	width: 100%;
+	}
+
+
+
+	/*----- Tablet ------ */
+
+	@media only screen and (min-width: 35em) {
+	    
+	.full_col-1 {
+	  	width: 50%;
+	}
+	
+	.full_col-2 {
+	  	width: 100%;
+	}
+	
+	.full_col-3 {
+	  	width: 100%;
+	}
+	
+	} 
+	
+	
+	
+	/*----- Desktop ------ */
+
+	@media only screen and (min-width: 80em) {
+	    
+	.full_col-1 {
+		width: 33.33%;
+	}
+	
+	.full_col-2 {
+		width: 66.66%;
+	}
+	
+	.full_col-3 {
+	  	width: 100%;
+	}
+	
+	} 
+
+
+
+
+/* ------ Float -------------- */
+
+[class*='col-'] {
+	float: left;
+}
+
+/* ------ Clear ------- */
+
+.grid_full:after {
+  content: "";
+  display: table;
+  clear: both;
+}

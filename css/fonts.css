@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* Additional font files */
+
+
+@font-face {
+    font-family: Aleo;
+    src: url(../fonts/aleo/Aleo-Regular.otf);
+}
+
+@font-face {
+    font-family: Aleo;
+    src: url(../fonts/aleo/Aleo-Bold.otf);
+	font-weight: bold;
+}
+  

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* Simple grid system  @ http://css-tricks.com/dont-overthink-it-grids/  */
+/* Grid system to define inner content with a MAX width of 1280px */ 
+
+.grid_fixed {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+
+
+/* ------ Column widths ------ */
+
+.content_col-1-2 {
+  	width: 100%;
+	box-sizing: border-box;
+}
+.content_col-2-2 {
+  	width: 100%;
+	box-sizing: border-box;
+}
+
+
+/* ------ Float -------------- */
+
+[class*='col-'] {
+	float: left;
+}
+
+/* ------ Clear ------- */
+
+.grid_fixed:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+
+
+/*----- Tablet & up ------ */
+
+@media only screen and (min-width: 35em) {
+	    
+	.grid_fixed {
+		max-width: 1024px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		box-sizing: border-box;
+	}
+	
+	
+	/* ------ Column widths ------ */
+
+	.content_col-1-2 {
+		width: 50%;
+		box-sizing: border-box;
+	}
+	
+	.content_col-2-2 {
+	  	width: 100%;
+		box-sizing: border-box;
+	}
+	
+	
+	/* ------ Margin/Padding ----- */
+
+	[class*='content_col-1-2'] {
+	  	padding-right: 10px;
+	}
+
+	[class*='content_col-']:last-of-type {
+	  	padding-right: 0;
+		padding-left: 10px;
+	}
+
+	.end {
+		padding-right: 0;
+	}
+
+	
+	} 
+	
+
+
+
+
+
+
+
+
+
+
+
+
