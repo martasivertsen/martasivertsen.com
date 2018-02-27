@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-/* Grid system to define content with 100% width */ 
+/* Grid system to define content with 100% width */
 
 .grid_full {
 	width: 100%;
@@ -15,11 +15,11 @@
 	.full_col-1 {
 	  	width: 100%;
 	}
-	
+
 	.full_col-2 {
 	  	width: 100%;
 	}
-	
+
 	.full_col-3 {
 	  	width: 100%;
 	}
@@ -29,41 +29,66 @@
 	/*----- Tablet ------ */
 
 	@media only screen and (min-width: 35em) {
-	    
+
 	.full_col-1 {
 	  	width: 50%;
 	}
-	
+
 	.full_col-2 {
 	  	width: 100%;
 	}
-	
+
 	.full_col-3 {
 	  	width: 100%;
 	}
-	
-	} 
-	
-	
-	
+
+	}
+
+
+
 	/*----- Desktop ------ */
 
 	@media only screen and (min-width: 80em) {
-	    
-	.full_col-1 {
-		width: 33.33%;
-	}
-	
-	.full_col-2 {
-		width: 66.66%;
-	}
-	
-	.full_col-3 {
-	  	width: 100%;
-	}
-	
-	} 
 
+	.full_col-1 {
+		width: 50%;
+	}
+
+	.full_col-2 {
+		width: 100%;
+	}
+
+	}
+
+
+	/*----- More Projects: a grid to see more projects on the project detail pages ------ */
+
+	/* -- Tablet & up -- */
+
+	@media only screen and (min-width: 35em) {
+
+	.full_moreProjects_col-1 {
+		width: 25%;
+	}
+
+	.full_moreProjects_col-2 {
+		width: 50%
+	}
+
+	.full_moreProjects_col-3 {
+			width: 75%;
+	}
+
+	.full_moreProjects_col-4 {
+			width: 100%;
+	}
+
+	.moreProjects {
+		background-color: #191919;
+		padding: 100px 0 0 0;
+	}
+
+	}
 
 
 
