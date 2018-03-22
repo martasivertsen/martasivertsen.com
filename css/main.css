@@ -46,17 +46,30 @@ html, body { height: 100%; }
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 3px solid #1A1A1A;
-    margin: 60px auto 0 auto;
-    padding: 0;
-    width: 5%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 4px solid #4DBC8E;
+  margin: 20px auto 20px 4px;
+  padding: 0;
+  width: 10%;
 }
 
 hr.reverse {
 	border-top: 3px solid white;
+}
+
+hr.black {
+	border-top: 3px solid black;
+}
+
+hr.grey {
+    display: block;
+    height: 1px;
+    border: 0;
+    background-color: #EFEFEF;
+    padding: 0;
+    width: 100%;
 }
 
 
@@ -113,9 +126,9 @@ textarea {
     	/* --- STANDARD --- */
 
     a {
-			color: #555555;
+			color: #000000;
 			text-decoration: none;
-			font-size: 1em;
+			font-size: .95em;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			display: block;
@@ -223,17 +236,18 @@ textarea {
 
 		h1 {
 			color: black;
-			font-size: 2.25em;
+			font-size: 3em;
 			font-weight: 800;
 			text-align: left;
 			margin: .3em 0;
+      line-height: 1.25em;
 		}
 
     h2 {
      letter-spacing: 0.085em;
      color: #000000;
-     font-size: 3.75em;
-     font-weight: 900;
+     font-size: 1em;
+     font-weight: 300;
      text-align: left;
    }
 
@@ -248,10 +262,11 @@ textarea {
 		}
 
   	h4 {
-			letter-spacing: 1px;
-			font-size: 1em;
-			font-weight: 600;
-			color: #555555;
+      letter-spacing: 1px;
+			font-size: 1.25em;
+			font-weight: 200;
+      line-height: 1.75em;
+			color: #000000;
 			margin-bottom: 20px;
 			text-align: left;
 		}
@@ -260,12 +275,12 @@ textarea {
 		/* --- BODY ------------------------------------------ */
 
 		p {
-			font-size: 1em;
+			font-size: 1.25em;
 			line-height: 1.75em;
-			font-weight: 700;
+			font-weight: 200;
 			width: 100%;
 			margin: 0 auto;
-			color: #3a3a3a;
+			color: #000000;
 			text-align: left;
 		}
 
@@ -278,9 +293,26 @@ textarea {
 		}  /* align text center */
 
 		.quote {
-			font-size: 1.25em;
-			line-height: 1.65em;
-			width: 100%;
+			padding-top: 80px;
+      background-image:url("../img/quotations_70w.svg");
+      background-repeat: no-repeat;
+      background-position-y: top;
+      background-position-x: -11px;
+      background-size: 10% 10%;
+		}
+
+    div.quote p {
+			font-size: 1.5em;
+      width: auto;
+      font-weight:700;
+      margin-right: 60px;
+      color: #000000;
+      line-height: 1.6em;
+		}
+
+    div.quote small {
+			line-height: 1.55em;
+      margin-right: 60px;
 		}
 
 		.subquote {
@@ -292,8 +324,8 @@ textarea {
 		small {
 			font-size: 1.05em;
 			text-align: left;
-			line-height: auto;
-			font-weight: 400;
+			line-height: 1.55;
+			font-weight: 200;
 			color: #000000;
 		}
 
@@ -373,6 +405,20 @@ textarea {
 			border: 1px solid #EBEBEB;
 		}
 
+    .background {
+      background-color: #f8f8f8;
+    }
+
+    .background_green {
+      background-color: #4DBC8E;
+    }
+
+    .shadow,
+    .fotorama__stage__frame {
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, .10);
+    }
+
+
 
 
 /* --- LISTS ----------------------------------------------------
@@ -380,10 +426,13 @@ textarea {
 
 
 	ul, ol {
-
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.75em;
 	}
 
-	ol li {
+	ol li,
+  ul li {
 		padding-bottom: 20px;
 	}
 
@@ -408,6 +457,13 @@ textarea {
       }
 
 
+      /* --- Float right override --- */
+
+          .float_right {
+            float: right;
+          }
+
+
 
 	/* --- LAYOUT -------------------------------------------- */
 
@@ -418,8 +474,9 @@ textarea {
 				height: 60px;
 				position:fixed;
 				background-color: #ffffff;
-				z-index: 100;
+				z-index: 60;
         top: 0;
+        border-bottom: 1px solid #efefef;
 			}
 
 			header.sticky_header {
@@ -431,9 +488,9 @@ textarea {
 			}
 
 			.logo {
-				background-image: url("../img/Logo_hd_intro.svg");
+				background-image: url("../img/logo_green.svg");
 				background-repeat: no-repeat;
-				background-position: center left;
+				background-position-y: 14px;
 				height: 60px;
 				width: 60px;
 				float: left;
@@ -526,14 +583,77 @@ textarea {
 
 
 
+    /* -- On mobile these sizes are reduced by 40px: top_120, top_100, top_80, top_60, top_40 -- */
+
+    .top_120 {
+      padding-top: 80px;
+    }
+
+    .top_100 {
+      padding-top: 60px;
+    }
+
+    .top_80 {
+      padding-top: 40px;
+    }
+
+    .top_60 {
+      padding-top: 20px;
+    }
+
+    .top_40 {
+      padding-top: 0px;
+    }
+
+    .top_20 {
+      padding-top: 20px;
+    }
+
+    .top_4 {
+      padding-top: 4px;
+    }
+
+    .top_0 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+
+    /* -- Mobile only top padding -- */
+
+    .top_mobile_120 {
+      margin-top: 120px;
+    }
+
+    .top_mobile_100 {
+      margin-top: 100px;
+    }
+
+    .top_mobile_80 {
+      margin-top: 80px;
+    }
+
+    .top_mobile_60 {
+      margin-top: 60px;
+    }
+
+    .top_mobile_40 {
+      margin-top: 40px;
+    }
+
+    .top_mobile_20 {
+      margin-top: 20px;
+    }
+
+
 
     /* --- MAIN: HOME ------------------------------------- */
 
-    /* --- INTRO SECTION ------------------------------------- */
+    /* --- INTRO SECTION --- */
 
 
     #intro {
-
+      overflow: hidden;
     }
 
 
@@ -546,9 +666,8 @@ textarea {
     }
 
     div#intro .text {
-      width: 65%;
+      width: 70%;
       float: left;
-      margin-bottom: 80px;
     }
 
     div#intro #nav ul {
@@ -575,17 +694,17 @@ textarea {
     div#parallax_lower_left {
       height: 100%;
       width: 100%;
-      background: url(../img/home_texture_X.png) 0 100px no-repeat;
+      background: url(../img/home_texture_R_b.png) 0 100px no-repeat;
       position: absolute;
-      left: -25%;
-      top: 40%;
+      left: -15%;
+      top: 44%;
       z-index: -2;
     }
 
     div#parallax_upper_right {
       height: 100%;
       width: 100%;
-      background: url(../img/home_texture_X.png) no-repeat;
+      background: url(../img/home_texture_X_a.png) no-repeat;
       position: absolute;
       left: 88%;
       top: -5%;
@@ -603,7 +722,7 @@ textarea {
     }
 
     #intro_more {
-      margin-top: 200px;
+      margin-top: 140px;
     }
 
     #intro_more h3 {
@@ -615,10 +734,17 @@ textarea {
       top: -40%;
     }
 
+    #intro_more {
+      margin-top: 140px;
+    }
+
+    [id*=intro_more class*='grid_1024_col-1-2']:first-of-type {
+  			padding-top: 200px;
+  	}
 
 
 
-  	/* --- WORK --------------------------------------- */
+  	/* --- WORK --- */
 
 		.work {
       background-color: #191919;
@@ -654,43 +780,13 @@ textarea {
 
 
 
-
-
-
-	/* --- ABOUT -------------------------------------- */
-
-
-		.about {
-			background-color: #4db688;
-			padding: 60px 0;
-		}
-
-		.about p, .about h1, .about h4, .about {
-			color: white;
-		}
-
-		.about div {
-			max-width: 1024px;
-			margin: 0 auto;
-		}
-
-		.about hr {
-			margin: 60px auto 60px auto;
-		}
-
-		.about p {
-			width: 88%;
-		}
-
-
-
-
-
     /* --- CONTENT: DETAIL PAGES ----------------------------- */
+
+    /* --- General --- */
 
 
 		.content-container {
-			padding-top: 60px;
+			padding-top: 58px;
 		}
 
 		section img {
@@ -720,7 +816,7 @@ textarea {
 
 		.description {
 			text-align: left;
-      margin-top: 100px;
+      padding-top: 60px;
 		}
 
 		.textblock {
@@ -729,18 +825,60 @@ textarea {
 			text-align: left;
 		}
 
+    .position_left_40 {
+      top: -40%;
+    }
+
+    .position_left_10 {
+      top: -10%;
+    }
+
+    .challege_spacer {
+      height: auto;
+    }
+
+    .challenge_text {
+      margin-top: 0;
+    }
+
+    .label {
+      top: 8%;
+      right: 8%;
+      width: 15%;
+      background-color: #4DBC8E;
+      position: absolute;
+    }
 
 
-		/* --- CONTENT: FOTORAMA CUSTOME STYLES ------------- */
+		/* --- CONTENT: FOTORAMA CUSTOME STYLES --- */
 
 
 		.fotorama {
 			data-autoplay: true;
 			data-transition: crossfade;
 			data-arrows: false;
-     		data-click: true;
-     		data-swipe: false;
+     	data-click: true;
+     	data-swipe: false;
 		}
+
+    .fotorama__stage {
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, .10);
+      margin-top: 8px;
+    }
+
+
+    /* --- VIDEO --- */
+
+
+    .video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .video_wrapper {
+      padding: 0 40px;
+    }
 
 
 
@@ -752,6 +890,78 @@ textarea {
   			clear: both;
 		}
 
+
+    /* --- Final Image: For full width images that wrap up the project --- */
+
+    section#final_section_touchup {
+      background-image:url("../img/touchup_2048w_final_mobile.jpg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 100%;
+      height: 1600px;
+    }
+
+    section#final_section_mobileapp {
+      background-image:url("../img/mobileapp_2048w_final_mobile.jpg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 200%;
+      height: 1600px;
+    }
+
+    /*section#final_img_touchup video {
+      margin: 140px 30px 100px 80px;
+      width: 75%;
+    }*/
+
+    section.final_img div.genericText {
+      padding-top: 120px;
+    }
+
+    .final_phone_wrapper {
+      padding: 5% 5% 20% 5%;
+    }
+
+    #mobileapp_phone_wrapper {
+      background-image:url("../img/mobileapp_final_phone.png");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 100%;
+    }
+
+    #mobileapp_phone_wrapper img {
+      padding: 26% 12%;
+      width: 78%
+    }
+
+
+    /* --- Styles for exploring the UI section --- */
+
+    .section_explore_ui {
+      background-image:url("../img/mobileapp_2048w_mocks.png");
+      background-repeat: no-repeat;
+      background-position-y: 90%;
+      background-size: 100%;
+      height: 750px;
+    }
+
+
+    /* --- CONTENT: ABOUT PAGE ----------------------------- */
+
+    /* --- General --- */
+
+    #about {
+      width: 60%;
+      padding-top: 100px;
+    }
+
+    .about_ul {
+      padding-left: 0px;
+    }
+
+    #about_h4 {
+      width: 80%;
+    }
 
 
 
@@ -864,12 +1074,14 @@ textarea {
    ========================================================================== */
 
 
-    /*----- Tablet & up ----------------------------------------------------- */
+  /*----- Tablet & up ----------------------------------------------------- */
 
-	@media only screen and (min-width: 35em) {
+	/* @media only screen and (min-width: 700px) */
+
+  @media all and (min-width: 700px) {
 
 
-	    /*--- Typography ---------------------------------------------------- */
+	  /*--- Typography ---------------- */
 
 		h1 {
 			color: black;
@@ -882,26 +1094,12 @@ textarea {
 		}
 
     h2 {
-     letter-spacing: 0.085em;
-     color: #000000;
-     font-size: 3.75em;
-     font-weight: 900;
-     letter-spacing: 1px;
-     text-align: left;
-   }
-
-		/* -- old h2 styles -- */
-    /* --
-     h2 {
-			letter-spacing: 0.085em;
-			color: #AAAAAA;
-			font-size: 1em;
-			font-weight: 400;
-			text-transform: uppercase;
-			letter-spacing: 1px;
+      letter-spacing: 0.085em;
+      color: #000000;
+      font-size: 1em;
+      font-weight: 300;
       text-align: left;
-		}
-    -- */
+   }
 
     h3 {
 			letter-spacing: 0.04em;
@@ -913,24 +1111,20 @@ textarea {
 
   	h4 {
 			letter-spacing: 1px;
-			font-size: 1em;
-			font-weight: 600;
-			color: #555555;
+			font-size: 1.5em;
+			font-weight: 200;
+      line-height: 1.75em;
+			color: #000000;
 			margin-bottom: 20px;
 			text-align: left;
 		}
 
 		p {
-			font-size: 1.4em;
-			line-height: 1.5em;
-			font-weight: 400;
+			font-size: 1.25em;
+			line-height: 1.55em;
+			font-weight: 200;
 			width: 100%;
 			text-align: left;
-		}
-
-		.quote {
-			font-size: 2em;
-			line-height: 1.75em;
 		}
 
 		/*-- old
@@ -940,7 +1134,7 @@ textarea {
     --*/
 
 
-	    /*--- Elements -------------------------------------------------- */
+	  /*--- Elements ---------------- */
 
 		hr {
 			display: block;
@@ -962,11 +1156,10 @@ textarea {
 			text-align: left;
 		}
 
-		/* --
-    .description p {
-			padding-top: 30px;
+    .description {
+			text-align: left;
+      padding-top: 100px;
 		}
-    -- */
 
 		.about {
 			padding: 150px 0;
@@ -975,7 +1168,7 @@ textarea {
 
 
 
-	    /* --- SPACERS ---------------------------------------- */
+	  /* --- SPACERS --------------- */
 
 
 		.spacer_120 {
@@ -1007,17 +1200,62 @@ textarea {
 		}
 
 
+    .top_120 {
+      padding-top: 120px;
+    }
 
-		/* --- Header --- */
+    .top_100 {
+      padding-top: 100px;
+    }
+
+    .top_80 {
+      padding-top: 80px;
+    }
+
+    .top_60 {
+      padding-top: 60px;
+    }
+
+    .top_40 {
+      padding-top: 40px;
+    }
+
+    .top_20 {
+      padding-top: 20px;
+    }
+
+    .top_4 {
+      padding-top: 4px;
+    }
+
+    .top_0 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+
+    /* -- Mobile only top padding -- */
+
+    .top_mobile_120,
+    .top_mobile_100,
+    .top_mobile_80,
+    .top_mobile_60,
+    .top_mobile_40,
+    .top_mobile_20 {
+      margin-top: 0px;
+    }
+
+
+		/* --- Header ----------------- */
 
 		header {
-			height: 100px;
+			height: 60px;
 		}
 
 		.logo {
-			background-size: 75px auto;
-			height: 100px;
-			width: 100px;
+			background-size: 60px auto;
+			height: 60px;
+			width: 60px;
 		}
 
 		nav {
@@ -1028,17 +1266,17 @@ textarea {
 
 		nav ul {
 			height: 100%;
-			padding: 14px 0 0 0;
 		}
 
-		nav li {
-			padding: 15px;
-		}
+    nav a {
+      font-size: .95em;
+      color: #000000;
+    }
 
 
-    /* --- POSITIONING --------------------------------------- */
+  /* --- POSITIONING ------------- */
 
-        /* --- Relative --- */
+    /* --- Relative --- */
 
         .relative {
           position: relative;
@@ -1048,12 +1286,85 @@ textarea {
           position: absolute;
         }
 
+    /* --- Float right override --- */
 
-		/* --- Detail Pages --- */
+        .float_right {
+          float: right;
+        }
+
+
+		/* --- Detail Pages ---------- */
 
 		.content-container {
-			padding-top: 100px;
+			padding-top: 58px;
 		}
+
+    .challege_spacer {
+      height: 600px;
+    }
+
+    .challenge_text {
+      margin-top: 100px;
+    }
+
+    div.quote p {
+			font-size: 1.875em;
+      width: auto;
+      font-weight:700;
+      margin-right: 60px;
+      color: #000000;
+		}
+
+    .video_wrapper {
+      padding: 0 60px;
+    }
+
+    /* --- Styles for exploring the UI section --- */
+
+    .section_explore_ui {
+      background-image:url("../img/mobileapp_2048w_mocks.png");
+      background-repeat: no-repeat;
+      background-position-y: 130%;
+      background-size: 100%;
+      height: 950px;
+    }
+
+
+    /* --- Final Image: For full width images that wrap up the project --- */
+
+    section#final_section_touchup {
+      background-image:url("../img/touchup_2048w_final.jpg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 100%;
+      height: 930px;
+    }
+
+    section#final_section_mobileapp {
+      background-image:url("../img/mobileapp_2048w_final_img_2.jpg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 100%;
+      height: 940px;
+    }
+
+    section#final_section_mixer div.genericText {
+      margin-left: 8%;
+    }
+
+    /*section#final_img_touchup video {
+      margin: 140px 30px 100px 80px;
+      width: 75%;
+    }*/
+
+    section.final_img div.genericText {
+      padding-top: 310px;
+    }
+
+    .final_phone_wrapper {
+      padding: 30% 40% 30% 0;
+    }
+
 
 	}
 
@@ -1061,56 +1372,13 @@ textarea {
 
     /*----- Desktop & up ---------------------------------------------------- */
 
-	@media only screen and (min-width: 80em) {
 
+  @media all and (max-width: 1280px) {
 
-		.hero1a {
-			background-attachment: fixed;
-			/*background-image: url("../img/hero_2.jpg");
-			background-size: cover;
-			background-repeat: no-repeat;
-			height: 100%;
-			position: relative;*/
-		}
-
-		.hero1b {
-			background-attachment: fixed;
-			/*background-image: url("../img/logo_circle_blk.png");
-			background-repeat: no-repeat;
-			width: 100%;
-			height: 100%;
-			background-size: 250px auto;
-			background-position: 50%;*/
-		}
-
-		.hero2a {
-			display: block;
-		}
-
-		.hero2b {
-			opacity: 0;
-		}
-
-		/*.hero2b {
-			background-color: white;
-			background-image: url("../img/logo_green_circle.svg");
-			background-repeat: no-repeat;
-			background-size: 250px auto;
-			background-position: 50%;
-			height: 300px;
-		}*/
-
-		/*-- old
-    .intro {
-			opacity: 0;
-			margin: 10px auto 0 auto;
-			/*color: black;
-			font-size: 2em;
-			font-weight: 400;
-			text-align: center;
-			width: 80%;
-		}
-    --*/
+    .challenge_img {
+      right: -10%;
+      width: 60%;
+    }
 
 
 	}

@@ -5,17 +5,18 @@
 
 /* Grid A --------------------------------------------------------------------*/
 /* Grid system to define inner content with a MAX width of 1200px */
+/* Mobile styles */
 
 .grid_fixed {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 40px;
 }
 
 
-/* ------ Column widths ------ */
+/* ------ 2 Column widths ------ */
 
 .content_col-1-2 {
   	width: 100%;
@@ -25,6 +26,18 @@
   	width: 100%;
 		box-sizing: border-box;
 }
+
+/* ------ 3 Column widths ------ */
+
+.content_col-1-2 {
+  	width: 100%;
+		box-sizing: border-box;
+}
+.content_col-2-2 {
+  	width: 100%;
+		box-sizing: border-box;
+}
+
 
 
 /* ------ Float -------------- */
@@ -45,21 +58,22 @@
 
 
 
-/*----- Tablet & up ------ */
+/*----- Desktop ------ */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 700px) {
 
 	.grid_fixed {
-		max-width: 1200px;
-		margin-left: auto;
-		margin-right: auto;
 		width: 100%;
-		box-sizing: border-box;
 	}
 
 	.genericText {
-		max-width: 50%;
+		max-width: 42%;
 		float: right;
+	}
+
+	.genericText_left {
+		max-width: 42%;
+		float: left;
 	}
 
 
@@ -82,7 +96,7 @@
 	  	padding-right: 20px;
 	}
 
-	[class*='content_col-2']:last-of-type {
+	[class*='content_col-1-2']:last-of-type {
 	  	padding-right: 0;
 			padding-left: 20px;
 	}
@@ -91,26 +105,35 @@
 		padding-right: 0;
 	}
 
+}
+
+
 
 
 	/* Grid B --------------------------------------------------------------------*/
 	/* Grid system to define inner content with a MAX width of 1024px */
+	/* Mobile */
+
 
 	.grid_fixed_1024 {
 		max-width: 1024px;
 		margin-left: auto;
 		margin-right: auto;
 		box-sizing: border-box;
-		padding: 0 20px;
+		padding: 0 40px;
 	}
 
 
-	/* ------ Column widths ------ */
+	/* ------ 2 Column widths ------ */
 
 	.grid_1024_col-1-2 {
 	  	width: 100%;
 			box-sizing: border-box;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 40px;
 	}
+
 	.grid_1024_col-2-2 {
 	  	width: 100%;
 			box-sizing: border-box;
@@ -122,10 +145,41 @@
 	}
 
 
+	/* ------ 3 Column-grid ------ */
+
+	.grid_1024_col-1-3 {
+		width: 50%;
+		box-sizing: border-box;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	/*------ Padding ------------- */
+
+	/* 2 column grid */
+
+	[class*='grid_1024_col-1-2'] {
+			padding-right: 40px;
+	}
+
+	/* 3 column */
+
+	[class*='grid_1024_col-1-3'] {
+			padding-left: 20px;
+			padding-right: 20px;
+	}
+
+
+
 	/* ------ Float -------------- */
 
 	[class*='col-'] {
 		float: left;
+	}
+
+	.right {
+		float: right;
 	}
 
 
@@ -138,71 +192,96 @@
 	}
 
 
-	/*----- Tablet & up ------ */
 
-	@media only screen and (min-width: 35em) {
+/*----- Desktop & up ------ */
 
-		.grid_fixed_1024 {
-			max-width: 1080px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-			box-sizing: border-box;
-		}
+@media only screen and (min-width: 700px) {
 
-		.genericText {
-			max-width: 50%;
-			float: right;
-		}
+	.grid_fixed_1024 {
+		max-width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		box-sizing: border-box;
+	}
 
-
-		/* ------ 2 Column-grid ------ */
-
-		.grid_1024_col-1-2 {
-			width: 49%;
-			box-sizing: border-box;
-		}
-
-		.grid_1024_col-2-2 {
-		  width: 100%;
-			box-sizing: border-box;
-		}
-
-		.grid_1024_col-1-2_right {
-		  width: 48%;
-			box-sizing: border-box;
-		}
+	.genericText_1024 {
+		max-width: 46%;
+		float: right;
+	}
 
 
-		/* ------ 3 Column-grid ------ */
+	/* ------ 2 Column-grid ------ */
 
-		.grid_1024_col-1-3 {
-			width: 33%;
-			box-sizing: border-box;
-		}
+	.grid_1024_col-1-2 {
+		width: 49%;
+		box-sizing: border-box;
+	}
 
-		.grid_1024_col-2-3 {
-		  width: 66%;
-			box-sizing: border-box;
-		}
+	.grid_1024_col-2-2 {
+		width: 100%;
+		box-sizing: border-box;
+	}
 
-		.grid_1024_col-3-3 {
-		  width: 100%;
-			box-sizing: border-box;
-		}
+	.grid_1024_col-1-2_right {
+		width: 48%;
+		box-sizing: border-box;
+	}
 
 
-		/* ------ Margin/Padding ----- */
+	/* ------ 3 Column-grid ------ */
 
-		[class*='grid_1024_col-1-2'] {
-		  	padding-right: 40px;
-		}
+	.grid_1024_col-1-3 {
+		width: 33%;
+		box-sizing: border-box;
+	}
 
-		[class*='grid_1024_col-2']:last-of-type {
-		  	padding-right: 0;
-				padding-left: 40px;
-		}
+	.grid_1024_col-2-3 {
+		width: 66%;
+		box-sizing: border-box;
+	}
 
-		.end {
+	.grid_1024_col-3-3 {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+
+	/* ------ Margin/Padding ----- */
+
+	/* 2 column grid */
+
+	[class*='grid_1024_col-1-2'] {
+			padding-right: 40px;
+			padding-left: 0;
+	}
+
+	[class*='grid_1024_col-1-2']:last-of-type {
 			padding-right: 0;
-		}
+			padding-left: 40px;
+	}
+
+
+
+	/* 3 column */
+
+	[class*='grid_1024_col-1-3'] {
+			padding-left: 20px;
+			padding-right: 20px;
+	}
+
+	[class*='grid_1024_col-1-3']:first-of-type {
+			padding-left: 0;
+			padding-right: 40px;
+	}
+
+	[class*='grid_1024_col-1-3']:last-of-type {
+			padding-right: 0;
+			padding-left: 40px;
+	}
+
+	.end {
+		padding-right: 0;
+	}
+
+}

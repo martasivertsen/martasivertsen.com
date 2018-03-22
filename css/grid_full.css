@@ -28,7 +28,7 @@
 
 	/*----- Tablet ------ */
 
-	@media only screen and (min-width: 35em) {
+	@media only screen and (min-width: 980px) {
 
 	.full_col-1 {
 	  	width: 50%;
