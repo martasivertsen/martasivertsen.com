@@ -21,7 +21,7 @@ $(document).ready(function($) {
 					//.setPin("#sticky_header")
 					.addTo(controller);
 
-	var scene = new ScrollScene({triggerElement: "#nav_trigger", triggerHook: 0, offset: -200, duration: 0})
+	var scene = new ScrollScene({triggerElement: "#nav_trigger", triggerHook: 0, offset: -100, duration: 0})
 					.setTween(TweenMax.to("#nav", 0.2, {opacity: 0}))
 					.addTo(controller);
 
