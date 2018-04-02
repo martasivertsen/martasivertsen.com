@@ -511,7 +511,7 @@ textarea {
 			}
 
 			nav li {
-				padding: 0 0 0 40px;
+				padding: 0 0 0 30px;
 				float: left;
 			}
 
@@ -672,7 +672,7 @@ textarea {
     }
 
     div#intro h1 {
-      font-size: 5em;
+      font-size: 4em;
       line-height: 1em;
     }
 
@@ -702,7 +702,7 @@ textarea {
       width: 100%;
       background: url(../img/home_texture_R_b.png) 0 100px no-repeat;
       position: absolute;
-      left: -22%;
+      left: -55%;
       top: 44%;
       z-index: -2;
     }
@@ -728,7 +728,7 @@ textarea {
     }
 
     #intro_more {
-      margin-top: 140px;
+      margin-top: 60px;
     }
 
     #intro_more h3 {
@@ -738,10 +738,6 @@ textarea {
     .more_info {
       left: 55%;
       top: -40%;
-    }
-
-    #intro_more {
-      margin-top: 140px;
     }
 
     [id*=intro_more class*='grid_1024_col-1-2']:first-of-type {
@@ -983,7 +979,7 @@ textarea {
     /* --- General --- */
 
     #about {
-      width: 60%;
+      width: 100%;
       padding-top: 100px;
     }
 
@@ -992,7 +988,7 @@ textarea {
     }
 
     #about_h4 {
-      width: 80%;
+      width: 100%;
     }
 
 
@@ -1298,6 +1294,10 @@ textarea {
       color: #000000;
     }
 
+    nav li {
+      padding: 0 0 0 40px;
+    }
+
 
   /* --- POSITIONING ------------- */
 
@@ -1329,6 +1329,11 @@ textarea {
       width: 100px;
     }
 
+    div#intro h1 {
+      font-size: 5em;
+      line-height: 1em;
+    }
+
     div#intro .text {
       width: 70%;
       float: left;
@@ -1343,6 +1348,16 @@ textarea {
       padding: 0 40px 0 0;
       float: left;
       list-style: none;
+    }
+
+    div#parallax_lower_left {
+      height: 100%;
+      width: 100%;
+      background: url(../img/home_texture_R_b.png) 0 100px no-repeat;
+      position: absolute;
+      left: -22%;
+      top: 44%;
+      z-index: -2;
     }
 
     div#parallax_upper_right {
@@ -1378,9 +1393,6 @@ textarea {
       top: -40%;
     }
 
-    #intro_more {
-      margin-top: 140px;
-    }
 
     [id*=intro_more class*='grid_1024_col-1-2']:first-of-type {
   			padding-top: 200px;
@@ -1480,6 +1492,25 @@ textarea {
       padding: 35% 0%;
       width: 102%
     }
+
+
+    /* --- CONTENT: ABOUT PAGE ----------------------------- */
+
+    /* --- General --- */
+
+    #about {
+      width: 60%;
+      padding-top: 100px;
+    }
+
+    .about_ul {
+      padding-left: 0px;
+    }
+
+    #about_h4 {
+      width: 80%;
+    }
+
 
 
 	}
